@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE script SYSTEM "script.dtd">
+
+<script author="" scriptname="script_compsetactualdates">
+  <description>SCRIPT</description>
+  <statements>
+    <freeform description="AUTOSCRIPT">
+      <sql target="all">delete from autoscript where autoscript = 'COMPSETACTUALDATES'</sql>
+    </freeform>
+    <insert table="AUTOSCRIPT" ignore_duplicates="true">
+      <insertrow>
+        <columnvalue column="AUTOSCRIPT" string="COMPSETACTUALDATES" />
+        <columnvalue column="STATUS" string="Draft" />
+        <columnvalue column="SOURCE" string="if status=='COMP':&#xA;       mbo.setValue(&quot;ActStart&quot;, mbo.getDate(&quot;SchedStart&quot;) )&#xA;       mbo.setValue(&quot;ActFinish&quot;, mbo.getDate(&quot;SchedFinish&quot;) )" />
+        <columnvalue column="CREATEDDATE" date="sysdate" />
+        <columnvalue column="STATUSDATE" date="sysdate" />
+        <columnvalue column="CHANGEDATE" date="sysdate" />
+        <columnvalue column="OWNER" string="MAXADMIN" />
+        <columnvalue column="CREATEDBY" string="MAXADMIN" />
+        <columnvalue column="CHANGEBY" string="MAXADMIN" />
+        <columnvalue column="HASLD" boolean="false" />
+        <columnvalue column="LANGCODE" string="EN" />
+        <columnvalue column="SCRIPTLANGUAGE" string="python" />
+        <columnvalue column="USERDEFINED" boolean="true" />
+        <columnvalue column="LOGLEVEL" string="ERROR" />
+        <columnvalue column="INTERFACE" boolean="false" />
+        <columnvalue column="ACTIVE" boolean="true" />
+      </insertrow>
+    </insert>
+    <freeform description="AUTOSCRIPTVARS">
+      <sql target="all">delete from autoscriptvars where autoscript = 'COMPSETACTUALDATES'</sql>
+    </freeform>
+    <freeform description="SCRIPTLAUNCHPOINT">
+      <sql target="all">delete from scriptlaunchpoint where autoscript = 'COMPSETACTUALDATES'</sql>
+    </freeform>
+    <insert table="SCRIPTLAUNCHPOINT" ignore_duplicates="true">
+      <insertrow>
+        <columnvalue column="LAUNCHPOINTNAME" string="COMPSETACTUALDATES" />
+        <columnvalue column="AUTOSCRIPT" string="COMPSETACTUALDATES" />
+        <columnvalue column="DESCRIPTION" string="Sample for schedule dates" />
+        <columnvalue column="LAUNCHPOINTTYPE" string="ATTRIBUTE" />
+        <columnvalue column="OBJECTNAME" string="WORKORDER" />
+        <columnvalue column="OBJECTEVENT" number="0" />
+        <columnvalue column="ATTRIBUTENAME" string="STATUS" />
+        <columnvalue column="ACTIVE" boolean="true" />
+      </insertrow>
+    </insert>
+    <freeform description="LAUNCHPOINTVARS">
+      <sql target="all">delete from launchpointvars where autoscript = 'COMPSETACTUALDATES'</sql>
+    </freeform>
+  </statements>
+</script>
+
