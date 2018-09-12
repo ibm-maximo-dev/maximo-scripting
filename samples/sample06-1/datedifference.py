@@ -1,3 +1,4 @@
+from __future__ import print_function
 from java.util import Calendar
 from java.util import Date
 from psdi.server import MXServer
@@ -39,7 +40,7 @@ while(rs1.next()):
 	commSet.reset()
 	ctMbo = commSet.getMbo(0)
 	if (ctMbo is not None):
-		print " inside if"
+		print(" inside if")
 		ctMbo.setValue("SUBJECT","daydiff", MboConstants.NOVALIDATION_AND_NOACTION_AND_NOACCESSCHECK)
 		ctMbo.sendMessage(mbo,mbo)
 		 

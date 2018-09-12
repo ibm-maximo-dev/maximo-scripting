@@ -1,3 +1,4 @@
+from __future__ import print_function
 #-------------------------------------------------------------
 # AUTOSCRIPT:	 POEMAIL
 # DESCRIPTION:	Send a PO to the supplier
@@ -95,7 +96,7 @@ else: # If PO has vendor and vendor has email address
 	if schedule is not None:
 		reportschedset = MXServer.getMXServer().getMboSet("REPORTSCHED",userinfo)
 		if reportschedset is not None:
-			print "Obtained REPORTSCHED set"
+			print("Obtained REPORTSCHED set")
 			reportsched = reportschedset.add()
 			reportsched.setValue("REPORTNAME",v_reportname)
 			reportsched.setValue("appname",app)
@@ -112,12 +113,12 @@ else: # If PO has vendor and vendor has email address
 			reportsched.setValue("VARIANT",locale.getVariant())
 			reportsched.setValue("TIMEZONE",thisposet.getClientTimeZone().getID())
 			reportsched.setValue("LANGCODE",userinfo.getLangCode())
-			print "About to work with REPORTSCHEDULE cron task"
+			print("About to work with REPORTSCHEDULE cron task")
 			crontaskdef = reportsched.getMboSet("$parent","crontaskdef","crontaskname='REPORTSCHEDULE'").getMbo(0)
 			if crontaskdef is not None:
 				crontaskinstset = crontaskdef.getMboSet("CRONTASKINSTANCE")
 				if crontaskinstset is not None:
-					print "About to work with Cron task instance of REPORTSCHEDULE cron task"
+					print("About to work with Cron task instance of REPORTSCHEDULE cron task")
 					crontaskinst = crontaskinstset.add(MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 					if crontaskinst is not None:
 						d = Date()
@@ -129,17 +130,17 @@ else: # If PO has vendor and vendor has email address
 						crontaskinst.setValue("RUNASUSERID",userinfo.getUserName(),MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 						crontaskinst.setValue("HASLD",0,MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 						crontaskinst.setValue("AUTOREMOVAL",True,MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
-						print "have set all cron task instance values for REPORTSCHEDULE cron task"
+						print("have set all cron task instance values for REPORTSCHEDULE cron task")
 			reportsched.setValue("CRONTASKNAME",crontaskinst.getString("CRONTASKNAME"))
 			reportsched.setValue("INSTANCENAME",crontaskinst.getString("INSTANCENAME"))
-			print "Now going to work with Cron task PARAMETERS"
+			print("Now going to work with Cron task PARAMETERS")
 			cronparamset = crontaskinst.getMboSet("PARAMETER")
 			if cronparamset is not None:
 				sqf = SqlFormat(cronparamset.getUserInfo(),"reportname=:1")
 				sqf.setObject(1,"REPORTPARAM","REPORTNAME",v_reportname)
 				reportparamset = MXServer.getMXServer().getMboSet("REPORTPARAM",cronparamset.getUserInfo())
 				if reportparamset is not None:
-					print "working with REPORTPARAM mbo set"
+					print("working with REPORTPARAM mbo set")
 					reportparamset.setWhere(sqf.format())
 					reportparamset.reset()
 					i=reportparamset.count()
@@ -148,7 +149,7 @@ else: # If PO has vendor and vendor has email address
 						reportparam = reportparamset.getMbo(j)
 						cronparam = cronparamset.add(MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 						if cronparam is not None:
-							print "going to copy values from REPORTPARAM into CRONTASKPARAM"
+							print("going to copy values from REPORTPARAM into CRONTASKPARAM")
 							cronparam.setValue("CRONTASKNAME","REPORTSCHEDULE",MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 							cronparam.setValue("INSTANCENAME",crontaskinstname,MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 							cronparam.setValue("CRONTASKNAME","REPORTSCHEDULE",MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
@@ -161,10 +162,10 @@ else: # If PO has vendor and vendor has email address
 								uniquewhere = uniqueidname + "=" + str(uniqueidvalue)
 								cronparam.setValue("VALUE",uniquewhere,MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 							elif paramname=="paramstring":
-								print 'If condition for v_paramstring'
+								print('If condition for v_paramstring')
 								cronparam.setValue("VALUE",v_paramstring,MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 							elif paramname=="paramdelimiter":
-								print 'If condition for v_paramdelimiter'
+								print('If condition for v_paramdelimiter')
 								cronparam.setValue("VALUE",v_paramdelimiter,MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)
 							elif paramname=="appname":
 								cronparam.setValue("VALUE",v_appname,MboConstants.NOACCESSCHECK | MboConstants.NOVALIDATION_AND_NOACTION)

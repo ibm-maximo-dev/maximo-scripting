@@ -1,3 +1,4 @@
+from __future__ import print_function
 # Custom Action Launchpoint PORECCOMM
 # Called from Escalation PORECESC
 # com.ibm.tivoli.maximo.script.ScriptAction
@@ -19,8 +20,8 @@ today = MXServer.getMXServer().getDate()
 now = dfnow.format(today)
 today = df.format(today)
 
-def log(e): print str(now) + ": "+str(launchPoint)+("__>> %s" % e) + "\r\n"
-print "*************"
+def log(e): print(str(now) + ": "+str(launchPoint)+("__>> %s" % e) + "\r\n")
+print("*************")
 log("buffer")
 log("Entering Script:....."+str(now))
 
