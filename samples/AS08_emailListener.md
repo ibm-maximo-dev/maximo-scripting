@@ -30,29 +30,29 @@ The following items are used to implement this requirement:
 
 1. Create a test email account and configure an email listener to monitor that email account. Link this listener to the dedicated workflow process. Set up security authorization for this particular email listener for the Work Order Tracking application in Maximo Asset Management. The email listener runs under the “MAXADMIN” account ,and this administrative account has update authorization for the Work Order Tracking application. See <b>Figure 1</b>:
 
-![Email Listener](sample08/pic1.png)
+[Email Listener](sample08/pic1.png)
 <center><font size=1><b>Figure 1</b> WO Track Authorization</font></center>
 
 2. Create a workflow process that is named LSNRBPWO, which indicates its use with Work Orders. The workflow process is defined for the INBOUNDCOMM MBO. This MBO manages the staging table for all incoming email. Other email accounts might be processed by other listeners. All listeners share the same INBOUNDCOMM staging table. The workflow process contains just a Start and Stop nodes and a connecting line. The scripted action on the connecting line is all that is needed to drive the work order update logic. IMPORTANT: This workflow must be enabled and active to be used in Email Listener. <b>Figure 2</b>:
 
-![Email Listener](sample08/pic2.png)
+[Email Listener](sample08/pic2.png)
 <center><font size=1><b>Figure 2</b> Enable to be used (Email Listener Application)</font></center>
 
 3. The action, <code>LSNRWOACT</code>, is specified as shown in <b>Figure 3</b>:
 
-![Email Listener](sample08/pic4.png)
+[Email Listener](sample08/pic4.png)
 <center><font size=1><b>Figure 3</b> Configure Action LSNRWOACT</font></center>
 
 4. The name <code>LSNRWOACT</code> is used for the action, the action launch point and the script itself. In the Actions application, no work is required. In the Automation Scripts application, defining an action launch point automatically generates the action and links the action to the action launch point. 
 
-![Email Listener](sample08/pic4.png)
+[Email Listener](sample08/pic4.png)
 <center><font size=1><b>Figure 4</b> Configure Action Type</font></center>
 
 The Action Type is Custom Class in <b>Figure 4</b>. The class reference is supplied in the **Value** field. Do not edit the prepopulated values in the **Parameter/Attribute** field.
 
 5. The action launch point <code>LSNRWOACT</code> is defined by using the action launch point wizard in the Automation Scripts application. The MBO to target is <code>INBOUNDCOMM</code>. No input or output variables are defined currently. Remember, everything in this implementation operates against the <code>INBOUNDCOMM</code> table, not against <code>WORKORDER</code>. The script code <code>ALONE</code> operates against <code>WORKORDER</code>. <b>Figure 5</b>:
 
-![Email Listener](sample08/pic5.png)
+[Email Listener](sample08/pic5.png)
 <center><font size=1><b>Figure 5</b> The Launch Point </font></center>
 
 IMPORTANT: The **Launch Point Active** check box controls whether or not the launch point AND script execute. If unselected, the script is not run. Ignore the **Status** field in the Automation Scripts application, because it has no effect on the launch point.
@@ -157,7 +157,7 @@ The email must be composed exactly as shown above. The actual start and finish d
 
 After the email listener runs, it finds and updates the work order, which then displays the values in the application as shown:
 
-![Email Listener](sample08/pic6.png)
+[Email Listener](sample08/pic6.png)
 <center><font size=1><b>Figure 6</b> After email listener run </font></center>
 
 # Improvements

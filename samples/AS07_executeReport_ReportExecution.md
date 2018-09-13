@@ -27,17 +27,17 @@ If report execution was scheduled to run</td><tr>
 
 If the **Immediate** option was chosen, the report runs immediately, which opens the BIRT Report Viewer in a new browser window and displays details of the currently open purchase order.
 
-![Dizziness](sample07/pic1.png)
+[Dizziness](sample07/pic1.png)
 <center><font size=1><b>Figure 1</b> Details of a open purchase order.</font></center>
 
 If the **Schedule | At This Time** option was chosen, then e-mail details, such as recipient, must be specified, and the report is executed in the background. Depending on the selected delivery option, a notification is sent to the recipient that includes the report as a PDF file, an Excel spreadsheet, or a live URL that can be clicked by the recipient as shown in <b>Figure 2</b>.
 
-![Dizziness](sample07/pic2.png)
+[Dizziness](sample07/pic2.png)
 <center><font size=1><b>Figure 2</b> Confirmation note</font></center>
 
 Clicking the URL brings the user to a login page and after the user logs in, the Report Viewer is displayed. The Report Viewer shows a single entry that represents the executed report. A Download Content link enables the user to download the report as a PDF file or an XLS spreadsheet.
 
-![Dizziness](sample07/pic3.png)
+[Dizziness](sample07/pic3.png)
 <center><font size=1><b>Figure 3</b> Confirmation note</font></center>
 
 A couple of important points must be noted:

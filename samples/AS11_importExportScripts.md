@@ -75,7 +75,7 @@ To check if the required sample was successfully executed, complete the followin
 1. In the Maximo Asset Management Start Center, select **Go To > System Configuration > Platform Configuration > Automation Scripts**.  
 2. On the **List** tab, filter by script using the pattern <code>COMPSETACTUALDATES</code> or the given name for the executed sample. 
 
-![Script](sample11/pic1.png)
+[Script](sample11/pic1.png)
 
 
 # Steps to export an automation script into a .dbc file
@@ -104,7 +104,7 @@ The automation script <code>COMPSETACTUALDATES</code> is extracted into a .dbc f
 3. Select the <code>COMPSETACTUALDATES</code>. 
 4. From the action menu, select **Delete Script**. 
 
-![Delete Automation Script](sample11/pic2.jpg)
+[Delete Automation Script](sample11/pic2.jpg)
 
 5. On the main tab of the Automation Scripts application, ensure that the <code>COMPSETACTUALDATES</code> script was deleted successfully. 
 

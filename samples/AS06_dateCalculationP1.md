@@ -23,13 +23,13 @@ The following actions are required for the scenario
 
 The purpose of this attribute is to save the computed elapsed time in an end-user-friendly format in the product database. In the Database Configuration application ,create the persistent TIMESPENT attribute for the TICKET business object. The data type is ALN, and its length is 20 characters. Configure the product so that this new attribute takes effect. The attribute is inherited by the SR business object. 
 
-![Calculation](sample06-1/pic1.jpeg)
+[Calculation](sample06-1/pic1.jpeg)
 
 <u>SR application presentation</u>
 
 In the Application Designer, open the SR application presentation. Locate the Dates section on the **Service Request** tab. Add a text box  below the **Actual Finish** field. Configure the text box by binding the field with the TIMESPENT attribute of the SR business object. In the Textbox Properties dialog box, specify a label and select the SR.TIMESPENT attribute by using the Attribute lookup. Save the presentation. 
 
-![Calculation](sample06-1/pic2.jpeg)
+[Calculation](sample06-1/pic2.jpeg)
 
 <u>Object Launchpoint</u>
 
@@ -129,11 +129,11 @@ The parameter that is passed into the calcelapsedtime() function is not a long v
 
 Test the final script on the service request record and, this time, the elapsed time is successfully written into the Time Spent field:
 
-![Calculation](sample06-1/pic3.jpeg)                            
+[Calculation](sample06-1/pic3.jpeg)                            
 
 A test on a different service request record yields this output into the Time Spent field:
 
-![Calculation](sample06-1/pic4.jpeg) 
+[Calculation](sample06-1/pic4.jpeg) 
 
 
 The script consists of two parts:

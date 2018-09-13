@@ -33,7 +33,7 @@ Click **Next**.
 
 To verify that the automation script works, in the Work Order Tracking application, change the status to complete. The actual dates should be set to scheduled dates:
 
-<!-- ![Automation Scripting image 4](samples/sample01/SP03.png) -->
+<!-- [Automation Scripting image 4](samples/sample01/SP03.png) -->
 <center>
 <img border='3' src='sample01/SP03.png' height='300px' alt='Automation Scripting - Schedule Dates'/>
 </center>

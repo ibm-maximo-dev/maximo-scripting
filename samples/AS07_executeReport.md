@@ -272,7 +272,7 @@ Testing this script is straightforward.
 6. Wait for a short duration of time, such as a couple of minutes, to allow the cron task to execute the report.
 7. If you configured a mail client to receive the email notification from Maximo Asset Management, look for a new email in the inbox of the client that looks similar to the <b>Figure 4</b>:
 
-![Dizziness](sample07/pic4.png)
+[Dizziness](sample07/pic4.png)
 <center><font size=1><b>Figure 4</b> Email set up notification</font></center>
 
 8. Click the link to return to the product environment. The Report Viewer application shows one entry that corresponds to the purchase order that you just closed. You can download the PDF file or XLS spreadsheet by using the Download Content link for the entry.
@@ -281,7 +281,7 @@ Testing this script is straightforward.
 
 As with any automation script, testing in a development environment is best practice before the script and launch point are promoted to other environments. A few print statements in the body of the script can help trace execution. These print statements, when combined with the DEBUG log level of the scripting framework, can help you get useful execution information from the product log files:
 
-![Dizziness](sample07/pic5.png)
+[Dizziness](sample07/pic5.png)
 <center><font size=1><b>Figure 5</b> Logging sample</font></center>
 
 
@@ -300,7 +300,7 @@ As with any automation script, testing in a development environment is best prac
 The approach that is described in this topic show how scripting can be adapted to report execution. Knowledge of the scheduling capabilities of the reporting framework was a prerequisite to providing an implementation. The solution also shows how multiple product configurations, including report design, parameters, cron tasks, and cron task instances, are linked together to deliver functionality to end users.
 You can see the difference in the standard scheduled report execution versus the scripted report execution sequence in <b>Figure 6</b>:
 
-![Dizziness](sample07/pic6.png)
+[Dizziness](sample07/pic6.png)
 <center><font size=1><b>Figure 6</b> Scripted report execution sequence</font></center>
 
 The key difference is that in the scripted approach, report execution is scheduled automatically in response to an application event.

@@ -39,12 +39,12 @@ If you have a product environment that has a location that is associated with a 
 
 Maximo Asset Management version 7.5 Work Order Tracking application with standard business rule (**Asset** field is populated):
 
-![Business Rules](sample09/pic1.jpeg)
+[Business Rules](sample09/pic1.jpeg)
 <center><font size=1><b>Figure 1</b> Work Order Configuration </font></center>
 
 Maximo Asset Management version 7.5 Work Order Tracking application with the WOASSETCLRlaunch point enabled (**Asset** field is cleared automatically):
 
-![Business Rules](sample09/pic2.jpeg)
+[Business Rules](sample09/pic2.jpeg)
 <center><font size=1><b>Figure 2</b> Work Order Configuration </font></center>
 
 ## Summary

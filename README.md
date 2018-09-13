@@ -149,26 +149,26 @@ The following recipes can help you get started with automation scripts:
 
 ## Maximo automation scripting official documentation: 
 
-![Official Documentation - Maximo Automation Scripting 7.5](https://www.ibm.com/support/knowledgecenter/SSLKT6_7.5.0.5/com.ibm.mbs.doc/autoscript/t_ctr_automate_routine_app_tasks.html)
+[Official Documentation - Maximo Automation Scripting 7.5](https://www.ibm.com/support/knowledgecenter/SSLKT6_7.5.0.5/com.ibm.mbs.doc/autoscript/t_ctr_automate_routine_app_tasks.html)
 
-![Official Documentation - Maximo Automation Scripting 7.6](https://www.ibm.com/support/knowledgecenter/SSLKT6_7.6.0/com.ibm.mbs.doc/autoscript/t_ctr_automate_routine_app_tasks.html)    
+[Official Documentation - Maximo Automation Scripting 7.6](https://www.ibm.com/support/knowledgecenter/SSLKT6_7.6.0/com.ibm.mbs.doc/autoscript/t_ctr_automate_routine_app_tasks.html)    
 
 ## Document references 
 
-![IBM developerWorks](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20Maximo%20Asset%20Management/page/Customizing%20with%20automation%20scripts)
+[IBM developerWorks](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/IBM%20Maximo%20Asset%20Management/page/Customizing%20with%20automation%20scripts)
 
-![Scripting with Maximo Wiki](https://www.ibm.com/developerworks/community/blogs/a9ba1efe-b731-4317-9724-a181d6155e3a/entry/scripting_with_maximo6?lang=en)
+[Scripting with Maximo Wiki](https://www.ibm.com/developerworks/community/blogs/a9ba1efe-b731-4317-9724-a181d6155e3a/entry/scripting_with_maximo6?lang=en)
 
-![Scripting with Maximo.pdf](https://www.ibm.com/developerworks/community/forums/ajax/download/77777777-0000-0000-0000-000014772567/b8ec7d85-6a8d-4e25-bb89-d729c3322406/attachment_14772567_Scripting_with_Maximo.pdf)
+[Scripting with Maximo.pdf](https://www.ibm.com/developerworks/community/forums/ajax/download/77777777-0000-0000-0000-000014772567/b8ec7d85-6a8d-4e25-bb89-d729c3322406/attachment_14772567_Scripting_with_Maximo.pdf)
 
-![Collection of Automation Scripts for Maximo](https://www.ibm.com/developerworks/community/blogs/a9ba1efe-b731-4317-9724-a181d6155e3a/entry/My_Collection_of_Automation_Scripts?lang=en)
+[Collection of Automation Scripts for Maximo](https://www.ibm.com/developerworks/community/blogs/a9ba1efe-b731-4317-9724-a181d6155e3a/entry/My_Collection_of_Automation_Scripts?lang=en)
 ## Important references
 
 <b>NOTE:</b> Scripts are pieces of code. Products that are based on Tivoli's Process Automation Engine version 7.5 ship Jython and JavaScript engines to support automation scripts. The ability to use the right syntax and develop programming logic is a prerequisite to using automation scripts. These links provide significant details and examples on basic programming with Jython and JavaScript.
 
-![Jython Tutorial](http://www.jython.org/docs/tutorial/indexprogress.html)
+[Jython Tutorial](http://www.jython.org/docs/tutorial/indexprogress.html)
 
-![Rhino JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Rhino_documentation)
+[Rhino JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Rhino_documentation)
 
 Automation scripting is built on top of the Java JSR-223 standard for using scripting languages in a Java Virtual Machine. This link provides the specification details for the JSR-223 standard.
 
