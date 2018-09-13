@@ -31,19 +31,19 @@ Requirement 3: The replacement cost is always be one-half of the purchase price 
 
 From the action menu, click **Create** and select the **Script with Attribute Launch Point** action.
 
-![CreateAS](sample10/pic01.gif)
+[CreateAS](sample10/pic01.gif)
 
 2. Specify values in the **Launch Point**, **Object**, and **Attribute** fields.
 
 Select the **Validate** event.
 
-![CreateAS](sample10/pic02.gif)
+[CreateAS](sample10/pic02.gif)
 
 Click **Next**.
 
 3. Enter a name for the script and change the script language to 'jython'.
 
-![CreateAS](sample10/pic03.gif)
+[CreateAS](sample10/pic03.gif)
 
 Enter the following code in the **Source Code** field:
 ```python
@@ -56,13 +56,13 @@ errorkey = 'outofrangeprice'
 
 **Note:** THe errorgroup and errorkey lines must be indented, which is shown in the following image:
 
-![CreateAS](sample10/pic04.gif)
+[CreateAS](sample10/pic04.gif)
 
 Click **Next**.
 
 A system message is displayed.
 
-![CreateAS](sample10/pic05.gif)
+[CreateAS](sample10/pic05.gif)
 
 Click **Close**.
 
@@ -70,30 +70,30 @@ Click **Close**.
 Select the **Messages** action and click the **New Row** button.
 Specify values in the **Message Group**, **Message Key**, **Message ID Prefix**, and **Value** fields, as shown in the following image:
 
-![CreateAS](sample10/pic06.gif)
+[CreateAS](sample10/pic06.gif)
 
 Click **OK**.
 
 5. Open the Automation Scripts application.
 From the action menu, click **Create**" and select the **Script with Attribute Launch Point** action.
 
-![CreateAS](sample10/pic07.gif)
+[CreateAS](sample10/pic07.gif)
 
 6. Specify values in the **Launch Point**, **Object**, and **Attribute** fields and select the **Run Action** event.
 
-![CreateAS](sample10/pic08.gif)
+[CreateAS](sample10/pic08.gif)
 
 Click **Next**.
 
 7. Click the **New Row** button to create another variable.
 Specify values in the **Variable**, **Variable Type**,**Binding Type** and **Launch Point Attribute** fields. In this example, the values are <code>assetType</code> in the **Variable** field, <code>INOUT</code> in the **Variable Type** field, <code>ATTRIBUTE</code> in the **Binding Type** field, and <code>ASSETTYPE</code> in the  the **Launch Point Attribute** field, as shown in the following image:
 
-![CreateAS](sample10/pic09.gif)
+[CreateAS](sample10/pic09.gif)
 
 8. Click the **New Row** button to create another variable.
 Specify values in the **Variable**, **Variable Type**, **Binding Type**, and **Launch Point Attribute** fields. In this example, the values are <code>vendor</code> **Variable** field, <code>INOUT</code> in the **Variable Type** field, <code>ATTRIBUTE</code> in the **Binding Type** field, and <code>VENDOR</code> in the **Launch Point Attribute** field, as shown in the following image:
 
-![CreateAS](sample10/pic10.gif)
+[CreateAS](sample10/pic10.gif)
 
 Click **Next**.
 
@@ -111,12 +111,12 @@ The _required is an implicit variable for setting mandatory fields.
 
 Your Source Code screen looks like the following image:
 
-![CreateAS](sample10/pic11.gif)
+[CreateAS](sample10/pic11.gif)
 
 Click **Create** to create the launch point.
 A system message is displayed.
 
-![CreateAS](sample10/pic12.gif)
+[CreateAS](sample10/pic12.gif)
 
 Click **Close**.
 
@@ -124,14 +124,14 @@ Click **Close**.
 
 Specify values in the **Launch Point**, **Object**, and **Attribute** fields and select the **Run Action** event.
 
-![CreateAS](sample10/pic13.gif)
+[CreateAS](sample10/pic13.gif)
 
 Click **Next**.
 
 11. Click the **New Row** button to create another variable.
 Specify values in the **Variable**, **Variable Type**, **Binding Type**, and **Launch Point Attribute** fields. In this example, the values are <code>replacecost</code> in the **Variable** field, <code>INOUT</code> in the **Variable Type** field, <code>ATTRIBUTE</code> in the **Binding Type** field, and <code>REPLACECOST</code> in the**Launch Point Attribute** field, as shown in the following image:
 
-![CreateAS](sample10/pic14.gif)
+[CreateAS](sample10/pic14.gif)
 
 Click **Next**.
 
@@ -142,12 +142,12 @@ if purchaseprice > 200:
 replacecost = purchaseprice/2
 ```
 
-![CreateAS](sample10/pic15.gif)
+[CreateAS](sample10/pic15.gif)
 
 Click **Create**.
 A system message is displayed.
 
-![CreateAS](sample10/pic16.gif)
+[CreateAS](sample10/pic16.gif)
 
 Click **Close**.
 
@@ -161,24 +161,24 @@ All three attribute launch points are created.
 1. In the Assets application, open an existing asset.
 2. Enter "Production" for the asset type.
 
-![CreateAS](sample10/pic17.gif)
+[CreateAS](sample10/pic17.gif)
 
 3. Scroll down to check the **Vendor** field.
 Because the asset type is "PRODUCTION", the vendor field is mandatory as required by the "ASSETTYPE" attribute launch point.
 You can see that the **Vendor** field has an asterisk to indicate that it is a required field.
 
-![CreateAS](sample10/pic18.gif)
+[CreateAS](sample10/pic18.gif)
 
 4. In the **Purchase Price** field, enter 1000 and tab out of the field.
 
 Because the purchase price exceeds 200, the Replacement Cost value is changed to 500. which is half of the purchase price as required by the "CALREPLACECOST" attribute launch point.
 
-![CreateAS](sample10/pic19.gif)
+[CreateAS](sample10/pic19.gif)
 
 5. In the **Purchase Price** field, enter 50000.
 
 Click on the red cross to see the following error message: "BMXZZ0001E - Please enter a value between $20 and $20000 and then press Enter."
 
-![CreateAS](sample10/pic20.gif)
+[CreateAS](sample10/pic20.gif)
 
 Now you must click the **Edit My Value** button and enter a cost between $20 and $20000 as required by the "PURCHASEPRICE" attribute launch point.

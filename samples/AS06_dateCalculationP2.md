@@ -22,12 +22,12 @@ The following high-level steps implement the solution:
 
 In the action launch point wizard, you can define an action launch point and associated script code.
 
-![Calculation](sample06-2/pic1.jpeg)
+[Calculation](sample06-2/pic1.jpeg)
 <center><font size=1><b>Figure 1</b> Configurations to enable a scripted action in Maximo Asset Management version 7.5</font></center>
 
 In Step 1 of the action launch point wizard, name the launch point, name, the action and provide a description for the action.
 
-![Calculation](sample06-2/pic2.jpeg)
+[Calculation](sample06-2/pic2.jpeg)
 <center><font size=1><b>Figure 2</b> Step 1 of the action launch point wizard</font></center>
 
 In this example, the action launch point name and the action name are the same: ‘SRDDACTIONJAVA’. The ‘SR’ business object is associated with the launch point and the action.
@@ -66,7 +66,7 @@ After the date calculations, the script creates a work log entry for the given s
 
 <b>Figure 3</b> shows the action definition
 
-![Calculation](sample06-2/pic3.jpeg)
+[Calculation](sample06-2/pic3.jpeg)
 <center><font size=1><b>Figure 3</b> Scripted action definition</font></center>
 
 This action was automatically generated when the launch point and script were created. The action definition includes the fields and values that are listed in <b>Table 1</b>.
@@ -109,19 +109,19 @@ When defining the escalation, use the following SQL criteria at the escalation h
 
 Change the schedule so that the escalation runs every minute. Add an escalation point. Then add an action. Associate the SRDACTION with the escalation and save all changes. <b>Figure 4</b> shows the final escalation definition.
 
-![Calculation](sample06-2/pic4.jpeg)
+[Calculation](sample06-2/pic4.jpeg)
 <center><font size=1><b>Figure 4</b> SRDDESC escalation definition</font></center>
 
 ## Testing the configurations
 
 Activate the escalation and then create a test service request record that has a reported priority of 1, associate it with an asset, and save it with ‘NEW’ status. When the escalation runs, the associated action is executed, and the script computes new dates and inserts a work log. <b>Figure 5</b> shows the result of the date computation on the target service request record in the form of input and output.
 
-![Calculation](sample06-2/pic5.jpeg)
+[Calculation](sample06-2/pic5.jpeg)
 <center><font size=1><b>Figure 5</b> Result of escalation execution on a service request record</font></center>
 
 <b>Figure 6</b> shows the result of the work log record creation.
 	
-![Calculation](sample06-2/pic6.jpeg)
+[Calculation](sample06-2/pic6.jpeg)
 <center><font size=1><b>Figure 6</b> Work log created by script against the target service request record</font></center>
 
 ## Using logs to review script execution

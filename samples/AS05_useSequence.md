@@ -10,32 +10,32 @@ In the Automation Scripts application, select the **Create > Script with an Attr
 ```python
 key=str(id)
 ```
-![Use Sequence](sample05/pic1.png)
+[Use Sequence](sample05/pic1.png)
 
 ## Step 2: Variables tab
 
 On the **Variables** tab, in the Variables section, expand the <code>parentval</code> variable and fill in the **Variable Type** field with the value <code>IN</code>.
 
-![Use Sequence](sample05/pic2.png)
+[Use Sequence](sample05/pic2.png)
 
 Find the variable <code>key</code>, exapnd it and fill in the **Variable Type** field with the value <code>INOUT</code>.
 
-![Use Sequence](sample05/pic3.png)
+[Use Sequence](sample05/pic3.png)
 
 Also, find the variable <code>id</code>, exapnd it and fill in the **Variable Type** field with the value <code>INOUT</code>, as shown in the following image:
 
-![Use Sequence](sample05/pic4.png)
+[Use Sequence](sample05/pic4.png)
 
 
 ## Step 3: Launch Points tab
 
 On the **Launch Point** Tab, verify that the launch point <code>USESEQWO</code> is listed and activated in the Launch Point section.
 
-![Use Sequence](sample05/pic5.png)
+[Use Sequence](sample05/pic5.png)
 
 Also, at the Attribute Launch Point section, verify that the **Attribute** field is set to <code>REPORTEDBY</code> value and tjat the variables are listed into the Launch Point Variables, as shown in the following image:
 
-![Use Sequence](sample05/pic6.png)
+[Use Sequence](sample05/pic6.png)
 
 
 
