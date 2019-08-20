@@ -49,8 +49,8 @@ Enter the following code in the **Source Code** field:
 ```python
 from psdi.util import MXApplicationException
 if purchaseprice < 20 or purchaseprice > 20000:
-errorgroup = 'custom'
-errorkey = 'outofrangeprice'
+    errorgroup = 'custom'
+    errorkey = 'outofrangeprice'
 ```
 
 
@@ -100,10 +100,10 @@ Click **Next**.
 9. Enter the following source code:
 
 ```python
-if assettype_internal=="PRODUCTION":
-vendor_required=True
+if assettype_internal == "PRODUCTION":
+    vendor_required=True
 else:
-vendor_required=False
+    vendor_required=False
 ```
 
 **Note:** The _internal is an implicit variable that indicates that the asset type field is associated to a synonym domain.
@@ -139,7 +139,7 @@ Click **Next**.
 
 ```python
 if purchaseprice > 200:
-replacecost = purchaseprice/2
+    replacecost = purchaseprice / 2
 ```
 
 [CreateAS](sample10/pic15.gif)
